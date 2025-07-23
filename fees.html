@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Reset & base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f8f8fc;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Home button */
+      a[href="index.html"] {
+        display: inline-block;
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: #4b0082;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+      a[href="index.html"]:hover {
+        background-color: #6a0dad;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      /* Section titles */
+      #requirements h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #4b0082;
+        border-left: 5px solid #6a0dad;
+        padding-left: 15px;
+      }
+
+      /* Lists */
+      #requirements ul {
+        margin: 0 0 30px 20px;
+        padding-left: 15px;
+      }
+
+      #requirements li {
+        padding: 8px 0;
+        font-size: 1rem;
+        list-style: disc;
+        color: #444;
+      }
+
+      /* Notes section */
+      #requirements h2 + ul li {
+        font-weight: 500;
+        color: #222;
+      }
+
+      /* Paragraphs */
+      #requirements p {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        color: #444;
+      }
+
+      /* Table styles */
+      .course-pricing table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .course-pricing thead {
+        background-color: #4b0082;
+        color: white;
+      }
+
+      .course-pricing th,
+      .course-pricing td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+      }
+
+      .course-pricing tbody tr:hover {
+        background-color: #f1f1fb;
+      }
+
+      /* Responsive Table */
+      @media (max-width: 768px) {
+        .course-pricing table,
+        .course-pricing thead,
+        .course-pricing tbody,
+        .course-pricing th,
+        .course-pricing td,
+        .course-pricing tr {
+          display: block;
+        }
+
+        .course-pricing thead {
+          display: none;
+        }
+
+        .course-pricing td {
+          position: relative;
+          padding-left: 50%;
+          text-align: right;
+          border: none;
+          border-bottom: 1px solid #eee;
+        }
+
+        .course-pricing td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 20px;
+          top: 15px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #555;
+          font-size: 0.9rem;
+          text-align: left;
+        }
+      }
+
+      /* Footer */
+      footer {
+        background-color: #4b0082;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 60px;
+      }
+
+      footer p {
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+      }
+    </style>
+    <title>Fee Structure</title>
+  </head>
+  <body>
+    <a href="index.html">Home</a>
+
+    <section id="requirements">
+      <div class="container">
+        <h2>Requirements</h2>
+        <ul>
+          <li>Registration fee 1,000/=</li>
+          <li>Fees to be paid</li>
+          <li>2 T-shirts provided by the college at 1,000/= each</li>
+          <li>Black skirts/trouser</li>
+          <li>(2)3 quire hard cover and pen</li>
+          <li>College WID card 500/=</li>
+          <li>National ID or Birth Certificate</li>
+        </ul>
+        <br />
+
+        <h2>N/b</h2>
+        <ul>
+          <li>Hostels Available</li>
+          <li>Practical products should be provided by the students</li>
+          <li>Diploma Courses 10 months</li>
+          <li>Certificate courses 6 months</li>
+          <li>T.O.T 12 months</li>
+        </ul>
+        <br />
+        <h2>Fee Structure</h2>
+        <p>The Cosmetology fees structure below includes (Tuition Fee only)</p>
+        <div class="course-pricing">
+          <table>
+            <thead>
+              <tr>
+                <th>COURSE</th>
+                <th>TERM 1</th>
+                <th>TERM 2</th>
+                <th>TERM 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Course">Diploma in Hair Dressing</td>
+                <td data-label="Term 1">24,000</td>
+                <td data-label="Term 2">22,000</td>
+                <td data-label="Term 3">20,000</td>
+              </tr>
+              <tr>
+                <td data-label="Course">Certificate In Hair Dressing</td>
+                <td data-label="Term 1">18,000</td>
+                <td data-label="Term 2">18,000</td>
+                <td data-label="Term 3"></td>
+              </tr>
+              <tr>
+                <td data-label="Course">Diploma in Beauty Therapy</td>
+                <td data-label="Term 1">24,000</td>
+                <td data-label="Term 2">22,000</td>
+                <td data-label="Term 3">20,000</td>
+              </tr>
+              <tr>
+                <td data-label="Course">Certificate In Beauty Therapy</td>
+                <td data-label="Term 1">18,000</td>
+                <td data-label="Term 2">18,000</td>
+                <td data-label="Term 3"></td>
+              </tr>
+              <tr>
+                <td data-label="Course">Barbering</td>
+                <td data-label="Term 1">10,000</td>
+                <td data-label="Term 2"></td>
+                <td data-label="Term 3"></td>
+              </tr>
+              <tr>
+                <td data-label="Course">Nail Technology</td>
+                <td data-label="Term 1">10,000</td>
+                <td data-label="Term 2"></td>
+                <td data-label="Term 3"></td>
+              </tr>
+              <tr>
+                <td data-label="Course">T.O.T</td>
+                <td data-label="Term 1">25,000</td>
+                <td data-label="Term 2">22,000</td>
+                <td data-label="Term 3">20,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <h2>Examination & Certification</h2>
+
+        <ul>
+          <li>
+            Exam Fee(NITA) 11,000/= Payale in (April, August and December)
+          </li>
+          <li>Internal Certificate 1,000/=</li>
+          <li>Diploma 2000/=</li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Covelyne Training Institute. All rights reserved.</p>
+        <p>
+          TVETA Approved Institution | Transforming Lives Through Beauty
+          Education
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

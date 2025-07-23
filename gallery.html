@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covelyne Gallery & Enrollment</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fdfdfd;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: #0077cc;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem 0;
+      }
+
+      .navbar {
+        position: sticky;
+        top: 0;
+        background: #fff;
+        padding: 1rem 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+      }
+
+      .navbar .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar .logo {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #222;
+      }
+
+      .gallery-header {
+        text-align: center;
+        padding: 2rem 1rem 1rem;
+      }
+
+      .gallery-header h1 {
+        font-size: 2.5rem;
+      }
+
+      .gallery-header p {
+        font-size: 1.1rem;
+        color: #666;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      figure {
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+
+      figure img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+
+      figure:hover {
+        transform: translateY(-6px);
+      }
+
+      figcaption {
+        padding: 1rem;
+        font-size: 0.95rem;
+        color: #444;
+        background-color: #fafafa;
+        border-top: 1px solid #eee;
+      }
+
+      #enrollnow {
+        background: #f9f9f9;
+        padding: 3rem 1rem;
+        margin-top: 3rem;
+      }
+
+      #enrollnow h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      #enrollnow p {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        color: #555;
+      }
+
+      form {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      button {
+        background: #0077cc;
+        color: #fff;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        display: block;
+        margin: 1rem auto 0;
+      }
+
+      button:hover {
+        background-color: #005fa3;
+      }
+
+      footer {
+        background-color: #222;
+        color: #eee;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 4rem;
+      }
+
+      footer p {
+        margin: 0.5rem 0;
+      }
+
+      @media (max-width: 600px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">Covelyne Institute</div>
+        <a href="index.html">Home</a>
+      </div>
+    </header>
+
+    <!-- GALLERY -->
+    <section class="gallery-header">
+      <h1>Our Gallery</h1>
+      <p>Explore our practical sessions, student work, and classroom life.</p>
+    </section>
+
+    <section class="container">
+      <div class="gallery-grid">
+        <figure>
+          <img src="IMG-20250617-WA0002.jpg" alt="Hairdressing Class" />
+          <figcaption>Hairdressing practice session.</figcaption>
+        </figure>
+        <figure>
+          <img src="IMG-20250617-WA0003.jpg" alt="Beauty Class" />
+          <figcaption>Beauty therapy in action.</figcaption>
+        </figure>
+        <figure>
+          <img src="IMG-20250617-WA0005 (1).jpg" alt="Nail Tech" />
+          <figcaption>Nail technology basics.</figcaption>
+        </figure>
+        <figure>
+          <img src="IMG-20250617-WA0007.jpg" alt="Cosmetology" />
+          <figcaption>Cosmetology training.</figcaption>
+        </figure>
+        <figure>
+          <img src="IMG-20250617-WA0009.jpg" alt="Barbering" />
+          <figcaption>Barbering practical session.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ENROLL NOW SECTION -->
+    <section id="enrollnow">
+      <div class="container">
+        <h2>Enroll Now</h2>
+        <p>
+          Admissions Ongoing. Apply here or visit our Main Campus at Shanbad
+          House, Opposite New Naivas, Machakos Town, Kenya
+        </p>
+        <form
+          action="https://formsubmit.co/covelynetrainingnstitute@gmail.com"
+          method="POST"
+        >
+          <div class="form-grid">
+            <div>
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="tel"
+                name="phonenumber"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div>
+              <select name="selectcourse" required>
+                <option value="">Select Course</option>
+                <option value="Diploma in Hairdressing">
+                  Diploma in Hair Dressing
+                </option>
+                <option value="Certificate in Hairdressing">
+                  Certificate in Hair Dressing
+                </option>
+                <option value="Diploma in Beauty Therapy">
+                  Diploma in Beauty Therapy
+                </option>
+                <option value="Certificate in Beauty Therapy">
+                  Certificate in Beauty Therapy
+                </option>
+                <option value="Barbering">Barbering</option>
+                <option value="Nail Technology">Nail Technology</option>
+                <option value="T.O.T">T.O.T</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <textarea
+              name="message"
+              placeholder="Tell us about your interests and goals..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Send Application</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Covelyne Training Institute. All rights reserved.</p>
+        <p>
+          TVETA Approved Institution | Transforming Lives Through Beauty
+          Education
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
