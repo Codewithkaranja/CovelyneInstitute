@@ -17,6 +17,7 @@
     Whether you're starting your journey or enhancing your career, 
     Covelyne Training Institute provides quality education, experienced tutors, and a vibrant learning environment."
     />
+     
     <title>Covelyne Training Institute</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="enroll.html" class="html">
@@ -27,30 +28,31 @@
   </head>
   <body>
     <header id="header">
-      <div class="container header-container">
-        <div class="logo">Covelyne <span>Training Institute</span></div>
-         
+  <div class="container header-container">
+    <div class="logo">Covelyne <span>Training Institute</span></div>
+
+    <!-- MOVE THIS INSIDE -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="hamburger" id="hamburger">&#9776;
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-        <nav>
-          <ul id="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="enroll.html">Enroll Now</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="connect.html">Contact</a></li>
-            <li><a href="connect.html">Social Media</a></li>
-            <li><a href="#map">Location</a></li>
-          </ul>
-         
-        </nav>
-      </div>
-    </header>
+
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="enroll.html">Enroll Now</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="connect.html">Contact</a></li>
+        <li><a href="connect.html">Social Media</a></li>
+        <li><a href="#map">Location</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
     <section id="home">
       <div class="container">
@@ -313,60 +315,6 @@
         </p>
       </div>
     </footer>
-    <script>
-      // Header scroll effect
-      const header = document.getElementById("header");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-          header.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
-        }
-      });
-
-      // Mobile menu toggle
-     const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    
-  });
-
-
-      // Close mobile menu when clicking a link
-      document.querySelectorAll("#nav-menu a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("active");
-        });
-      });
-
-      // Scroll animations
-      const animateElements = document.querySelectorAll(".animate");
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-
-      animateElements.forEach((element) => {
-        observer.observe(element);
-      });
-
-      
-  
-
-      
-  
-
-
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
